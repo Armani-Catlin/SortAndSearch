@@ -13,6 +13,11 @@ public class Main {
          * Call your sorting and searching Algorithms here...
          *
          * */
+        int result = Search(arr, O);
+        if (result == -1)
+            System.out.print("The mark wasn't found.");
+        else
+            System.out.print("The mark was found on index " + result + ".");
         ArrayList<Integer> large = largeBatch();
         ArrayList<Integer> small = smallBatch();
         ArrayList<Integer> expectedLrg = expected(large);
