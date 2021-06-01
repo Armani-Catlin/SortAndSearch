@@ -1,16 +1,18 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class Insertion {
-    public static void insertionGet(int array[]) {
-        int n = array.length;
-        for (int j = 1; j < n; j++) {
-            int key = array[j];
+    public static void insertionGet(ArrayList<Integer> arr) {
+        int len = arr.size();
+        for (int j = 1; j < len; j++) {
+            int mark = arr.get(j);
             int i = j - 1;
-            while ((i > -1) && (array[i] > key)) {
-                array[i + 1] = array[i];
+            while ((i > -1) && (arr.get(i) > mark)) {
+                arr.set(i + 1, arr.get(i));
                 i--;
             }
-            array[i + 1] = key;
+            arr.set(i + 1, mark);
         }
     }
 }

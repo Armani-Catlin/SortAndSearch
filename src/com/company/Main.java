@@ -13,21 +13,23 @@ public class Main {
          * Call your sorting and searching Algorithms here...
          *
          * */
-        int result1 = Search();
+        new Main();
+        Main result1;
+        Main result2 = new Main();
+        result1 = Search();
         if (result1 == -1)
-            System.out.print("The mark wasn't found.");
+            System.out.println("The mark wasn't found.");
         else
-            System.out.print("The mark was found on index " + result1 + ".");
+            System.out.println("The mark was found on index " + result1 + ".");
         int result2 = Sort();
-        int result3 = Insertion();
+        result2.Insertion(largeBatch);
         int result4 = Bubble();
         int result5 = Binary();
+        int result6 = Shell();
         ArrayList<Integer> large = largeBatch();
         ArrayList<Integer> small = smallBatch();
         ArrayList<Integer> expectedLrg = expected(large);
         ArrayList<Integer> expectedSml = expected(small);
-
-
     }
 
     public static ArrayList<Integer> largeBatch() {

@@ -1,16 +1,18 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class Binary {
-    int binaryGet(int arr[], int l, int r, int x) {
-        if (r >= l) {
-            int mid = l + (r - l) / 2;
-            if (arr[mid] == x) {
-                return mid;
+    int binaryGet(ArrayList<Integer> arr[], int stand1, int stand2, int stand3) {
+        if (stand2 >= stand1) {
+            int middle = stand1 + (stand2 - stand1) / 2;
+            if (arr[middle] = stand3) {
+                return middle;
             }
-            if (arr[mid] > x) {
-                return binaryGet(arr, l, mid - 1, x);
+            if (arr[middle] > stand3) {
+                return binaryGet(arr, stand1, middle - 1, stand3);
             }
-            return binaryGet(arr, mid + 1, r, x);
+            return binaryGet(arr, middle + 1, stand2, stand3);
         }
         return -1;
     }

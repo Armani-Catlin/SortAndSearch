@@ -1,15 +1,17 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class Bubble {
-    static void bubbleGet(int[] arr) {
-        int n = arr.length;
-        int temp = 0;
-        for (int i = 0; i < n; i++) {
-            for (int j = 1; j < (n - i); j++) {
-                if (arr[j - 1] > arr[j]) {
-                    temp = arr[j - 1];
+    static void bubbleGet(ArrayList<Integer> arr[]) {
+        int len = arr.size;
+        int flow = 0;
+        for (int i = 0; i < len; i++) {
+            for (int j = 1; j < (len - i); j++) {
+                if (arr(j - 1) > arr[j]) {
+                    flow = arr[j - 1];
                     arr[j - 1] = arr[j];
-                    arr[j] = temp;
+                    arr[j] = flow;
                 }
 
             }
