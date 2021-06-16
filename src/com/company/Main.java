@@ -53,7 +53,7 @@ public class Main {
             System.out.println("The mark wasn't found in the binary search.");
         else
             System.out.println("The mark was found on index " + resultBinSmall + ".");
-        int resultBinLarge = Binary.binaryGet(small, 0, large.length - 1, 10);
+        int resultBinLarge = Binary.binaryGet(large, 0, large.length - 1, 10);
         if (resultBinLarge == -1)
             System.out.println("The mark wasn't found in the binary search.");
         else
